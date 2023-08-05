@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "1.0.0",
   "repository": {
-    "url": "git+https://github.com/gabbyepelle/todo.git"
+    "url": "git+https://github.com/gabbyepelle/todo/tree/main"
   },
   "description": "",
   "main": "index.js",
