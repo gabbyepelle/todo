@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo</title>
+</head>
+<body>
+    <header>
+        <img id="hamburger" class="hidden" src="./images/menu-icon.svg" alt="">
+        <span id="logo">TODO </span>
+        <img id="check" src="./images/1467299975.svg" alt="">
+    </header>
+   <div id="sidebar">
+    <ul>
+        <li>⏰ <button id="today">Today</button></li>
+        <li>📆 <button id="upcoming">Upcoming</button></li>
+        <li id="proj">📂 Projects</li>
+        <ul id="project-list">
+        </ul>
+        
+    </ul>
+    <button id="add-project">Add Project</button>
+   
+
+    <div class="project-form-container hidden">
+        <span class="close" id="close-project">X</span>
+        <form action="" id="project-form">
+            <h2>Add Project</h2>
+            <div class="form-control">
+                <label for="proj-title">Title</label>
+                <input type="text" name="proj-title" id="proj-title">   
+            </div> 
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+   </div>
+   <main id="main">
+    <h1>My Projects</h1>
+    <div id="content"></div>
+    <button id="add">Add</button>
+    <div class="form-container hidden">
+        <span class="close" id="close-todo">X</span>
+       
+            <h2>Add ToDo</h2>
+        <form action="" id="addTodo">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+                </div>
+                <div class="form-control">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div class="form-control">
+                    <legend>Priority:</legend>
+                    <div>
+                        <input type="radio" id="low" name="priority" value="low" checked>
+                        <label for="low">Low</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="medium" value="medium" name="priority">
+                        <label for="medium">Medium</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="high" value="high" name="priority">
+                        <label for="high">High</label>
+                      </div>
+                </div>
+                <div class="form-control description">
+                    <label for="description">Optional Description</label>
+                    <textarea name="description" id="description" cols="10" rows="5"></textarea>
+                </div>
+                <div class="form-control">
+                    <button type="submit">Submit</button>
+                  </div>
+        </form>
+
+    </div>
+    <div class="form-container edit-form-container hidden">
+        <span class="close" id="close-edit">X</span>
+        <h2>Edit ToDo</h2>
+        <form action="" id="editTodo">
+            <div class="form-control">
+                <label for="editTitle">Title</label>
+                <input type="text" name="editTitle" id="editTitle" required>
+                </div>
+                <div class="form-control">
+                    <label for="editDate">Date</label>
+                    <input type="date" name="editDate" id="editDate" required>
+                </div>
+                <div class="form-control">
+                    <legend>Priority:</legend>
+                    <div>
+                        <input type="radio" id="edit-low" name="editPriority" value="low">
+                        <label for="low">Low</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="edit-medium" value="medium" name="editPriority">
+                        <label for="medium">Medium</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="edit-high" value="high" name="editPriority">
+                        <label for="high">High</label>
+                      </div>
+                </div>
+                <div class="form-control description">
+                    <label for="editDescription">Optional Description</label>
+                    <textarea name="editDescription" id="editDescription" cols="10" rows="5"></textarea>
+                </div>
+                <div class="form-control">
+                    <button type="submit">Submit</button>
+                  </div>
+        </form>
+    </div>
+    <div class="project-form-container rename-container hidden">
+        <span class="close" id="close-rename">X</span>
+        <form action="" id="rename-form">
+            <h2>Rename Project</h2>
+            <div class="form-control">
+                <label for="rename-title">Title</label>
+                <input type="text" name="rename-title" id="rename-title">   
+            </div> 
+            <button type="submit">Submit</button>
+        </form>
+    
+
+   </main>
+  
+
+    <script src="main.js"></script>
+</body>
+</html>
