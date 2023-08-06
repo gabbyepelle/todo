@@ -147,7 +147,7 @@ main button{
 }
 
 .hidden{
-    display:none !important;
+    display:none;
 }
 
 .close{
