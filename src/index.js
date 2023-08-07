@@ -42,6 +42,12 @@ if(!localStorage.getItem("myProjects")){
     const proj = displayProject(Inbox);
     content.appendChild(proj)
     currentProject.curr = Inbox;
+    const btn = populateSidebar(Inbox);
+    const list = document.querySelector('#project-list');
+    const li = document.createElement('li');
+    list.appendChild(li);
+    li.appendChild(btn);
+
 }else{
     //retrieve data from localStorage
     const storage = JSON.parse(localStorage.getItem("myProjects"));
